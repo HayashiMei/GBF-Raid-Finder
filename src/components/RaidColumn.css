@@ -1,0 +1,92 @@
+.root {
+  height: 100%;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.flex {
+  flex: 1;
+}
+
+.btnEdit {
+  height: 36px !important;
+  width: 36px !important;
+  box-shadow: none !important;
+  margin-right: 16px !important;
+}
+
+.appBar {
+  height: 76px;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center;
+  /* background-color: #3f51b5 !important; */
+  box-shadow: 3px 2px 4px -1px rgba(0, 0, 0, 0.2), 3px 4px 5px 0px rgba(0, 0, 0, 0.14), 5px 1px 10px 0px rgba(0, 0, 0, 0.12) !important;
+  ;
+}
+
+.paper {
+  padding: 8px 0 8px 16px;
+}
+
+.bossName {
+  margin-bottom: 8px !important;
+  font-size: 1.25rem !important;
+  line-height: 1 !important;
+  color: #fff !important;
+}
+
+.bossEnName {
+  color: #fff !important;
+  line-height: 1 !important;
+}
+
+.content {
+  padding: 0 !important;
+}
+
+.popperClose {
+  pointer-events: none;
+}
+
+.menuIcon {
+  margin: 0 !important;
+}
+
+.menuText {
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+  display: block;
+  padding-left: 16px;
+}
+
+.notificationBanner {
+  text-align: center;
+  background-color: #eaeaea;
+  font-size: 0.9em;
+  line-height: 30px;
+  color: #292f33;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+}
+
+.notificationBannerItem {
+  flex: 1;
+  font-size: 0.75rem;
+}
+
+.notificationBannerIcon {
+  margin-right: 2px;
+  position: relative;
+  top: 4px;
+  font-size: 1rem !important;
+}

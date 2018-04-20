@@ -1,0 +1,11 @@
+.root {
+  height: 500px;
+}
+
+.content {
+  padding: 0 !important;
+}
+
+.icon {
+  color: #f50057 !important;
+}

@@ -1,0 +1,16 @@
+:global(.app-theme--dark) .root {
+  background: #222426;
+}
+
+.appBar {
+  flex-direction: row !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btnClose {
+  height: 40px !important;
+  width: 40px !important;
+  box-shadow: none !important;
+  margin: 0 8px !important;
+}

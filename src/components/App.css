@@ -1,0 +1,13 @@
+:global(.app) {
+  height: 100%;
+}
+
+:global(.app-theme--dark) {
+  background: #222426;
+}
+
+.btnSettings {
+  position: absolute !important;
+  bottom: 28px;
+  right: 28px;
+}
