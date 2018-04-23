@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import RaidColumn from './RaidColumn';
-import { bosses } from './../utils/boss';
 import PubSub from 'pubsub-js';
 import { copy, getIndexByProp } from './../utils/Utils';
 import CSSModules from 'react-css-modules';
@@ -151,7 +150,7 @@ class RaidPanel extends Component {
 
   render() {
     const items = this.state.follow.map((value, index) => {
-        var en = ''
+        let bosses = JSON.parse(localStorage.getItem('boss')), en = ''
         for (var i in bosses) {
           if (bosses[i].name === value.name) {
             en = bosses[i].en;

@@ -27,6 +27,16 @@ class BossContainer extends Component {
       this.state.follow = JSON.parse(followCache);
     }
   }
+  
+  componentDidMount = () => {
+    this.reloadBoss_token = PubSub.subscribe('ReloadBoss', (topic, boss) => {
+      console.info(boss)
+    });
+  };
+
+  componentWillUnmount = () => {
+    PubSub.unsubscribe(this.reloadBoss_token);
+  };
 
   shouldComponentUpdate = (nextProps, nextState) => {
     return this.state !== nextState;
