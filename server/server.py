@@ -31,7 +31,7 @@ def new_client(client, server):
 
 def client_left(client, server):
     print("Client(%d) disconnected" % client['id'])
-    clients.pop(client['id'])
+    clients.pop()
     if len(client) == 0:
         threads.pop()
 
