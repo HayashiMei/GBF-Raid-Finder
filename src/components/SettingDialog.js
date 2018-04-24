@@ -41,12 +41,21 @@ class SettingDialog extends Component {
     }
   }
 
+  componentWillReceiveProps = (nextProps) => {
+    if (!this.props.open && nextProps.open) {
+      let followCache = localStorage.getItem('follow');
+      if (followCache) {
+        this.setState({ follow: JSON.parse(followCache) });
+      }
+    }
+  };
+
   shouldComponentUpdate = (nextProps, nextState) => {
     return this.props.open !== nextProps.open
       || this.state.tabIndex !== nextState.tabIndex
       || this.state.boss !== nextState.boss
       || this.state.follow !== nextState.follow;
-  }
+  };
 
   handleClose = () => {
     this.props.onClose(this.props.value);
