@@ -57,7 +57,7 @@ class SettingDialog extends Component {
       res => res.json()
     ).then(data => {
       localStorage.setItem('boss', JSON.stringify(data));
-      this.setState({ boss: data});
+      this.setState({ boss: data });
     }).catch(e => console.log("Oops, reload failed...", e));
   };
 

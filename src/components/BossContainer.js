@@ -14,7 +14,6 @@ class BossContainer extends Component {
   }
 
   render() {
-    console.info('render')
     const newList = this.props.boss.map((boss, index) => {
       return (
         <ListItem divider button key={index} onClick={this.props.handleToggle(boss.name)}>

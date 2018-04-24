@@ -111,8 +111,8 @@ class App extends Component {
         follow = JSON.stringify(followCache),
         newFollow = [];
       for (let i = 0; i < follow.length; i++) {
-        if (getIndexByProp(data, 'name', newFollow[i].name) > -1) {
-          newFollow.push(newFollow[i]);
+        if (getIndexByProp(data, 'name', follow[i].name) > -1) {
+          newFollow.push(follow[i]);
         }
       }
     }).catch(e => console.log("Oops, updateBosses failed...", e))
