@@ -46,7 +46,7 @@ class RaidColumn extends Component {
 
   shouldComponentUpdate = (nextProps, nextState) => {
     const change = this.state.bossName !== nextState.bossName
-      || this.state.raidIDs.length !== nextState.raidIDs.length
+      || this.state.raidIDs !== nextState.raidIDs
       || this.state.timeFormat !== nextState.timeFormat
       || this.state.showUserImages !== nextState.showUserImages
       || this.state.open !== nextState.open
@@ -139,11 +139,12 @@ class RaidColumn extends Component {
   };
 
   render() {
+    console.info('rende')
     const { open, bossName, bossEnName, raidIDs, timeFormat, showUserImages } = this.state,
       raidIDList = raidIDs.map((value, index) => {
         return (
           <RaidItem
-            key={value.id + value.time}
+            key={`${value.id}-` + Math.floor(Math.random()*10000) + '-' + Math.floor(Math.random()*10000)}
             raidID={value.id}
             showUserImages={showUserImages}
             userName={value.userName}
