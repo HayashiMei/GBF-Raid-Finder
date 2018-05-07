@@ -1,70 +1,17 @@
 import React, { Component } from 'react';
 import Button from 'material-ui/Button';
 import Icon from 'material-ui/Icon';
-import RaidPanel from './RaidPanel'
-import SettingDialog from './SettingDialog'
+import { MuiThemeProvider } from 'material-ui/styles';
 import Websocket from 'react-websocket';
 import PubSub from 'pubsub-js';
 import { IntlProvider } from 'react-intl';
 import fetch from 'isomorphic-fetch';
-import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import { getIndexByProp } from './../utils/Utils';
 import CSSModules from 'react-css-modules'
+import RaidPanel from './RaidPanel'
+import SettingDialog from './SettingDialog'
+import { dark, light } from './Theme'
+import { getIndexByProp } from '../utils/Utils';
 import styles from './App.css'
-
-const dark = createMuiTheme({
-  overrides: {
-    MuiDialog: {
-      paper: {
-        background: '#222426',
-      },
-      paperWidthSm: {
-        maxWidth: 500,
-      },
-    },
-    MuiListItem: {
-      root: {
-        color: 'white',
-      },
-      divider: {
-        borderBottom: '1px solid gray',
-      },
-    },
-    MuiListItemText: {
-      primary: {
-        color: 'white',
-      },
-      secondary: {
-        color: 'white',
-      },
-    },
-    MuiFormControlLabel: {
-      label: {
-        color: 'white',
-      },
-    },
-    MuiRadio: {
-      default: {
-        color: '#919293',
-      },
-    },
-    MuiDialogActions: {
-      action: {
-        color: 'white',
-      },
-    },
-  },
-});
-
-const ligth = createMuiTheme({
-  overrides: {
-    MuiDialog: {
-      paperWidthSm: {
-        maxWidth: 500,
-      },
-    },
-  },
-});
 
 class App extends Component {
   constructor(props) {
@@ -148,7 +95,7 @@ class App extends Component {
 
   render() {
     return (
-      <MuiThemeProvider theme={this.state.theme === 'dark' ? dark : ligth}>
+      <MuiThemeProvider theme={this.state.theme === 'dark' ? dark : light}>
       <IntlProvider locale="en">
         <div className={this.state.theme === 'dark' ? "app app-theme--dark" : "app"}>
             <RaidPanel></RaidPanel>
